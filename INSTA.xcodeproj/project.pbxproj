@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BBCBC95E7F808C23434916A /* Pods_INSTA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C6EE347E2F90B15ACFC6EA /* Pods_INSTA.framework */; };
 		B4C7ECB5207154BE00BAE260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C7ECB4207154BE00BAE260 /* AppDelegate.swift */; };
 		B4C7ECBA207154BE00BAE260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C7ECB8207154BE00BAE260 /* Main.storyboard */; };
 		B4C7ECBC207154BE00BAE260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C7ECBB207154BE00BAE260 /* Assets.xcassets */; };
@@ -14,9 +15,14 @@
 		B4C7ECCD2071563700BAE260 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C7ECCC2071563700BAE260 /* SignUpVC.swift */; };
 		B4C7ECCF2071565500BAE260 /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C7ECCE2071565500BAE260 /* homeVC.swift */; };
 		B4C7ECD1207158FC00BAE260 /* RoundedProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C7ECD0207158FC00BAE260 /* RoundedProfileImage.swift */; };
+		B4C7ECD32071601400BAE260 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4C7ECD22071601300BAE260 /* GoogleService-Info.plist */; };
+		B4C7ECD5207160CD00BAE260 /* Dataservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C7ECD4207160CD00BAE260 /* Dataservice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20C6EE347E2F90B15ACFC6EA /* Pods_INSTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INSTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4628D20969DB37BC4F31608B /* Pods-INSTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INSTA.release.xcconfig"; path = "Pods/Target Support Files/Pods-INSTA/Pods-INSTA.release.xcconfig"; sourceTree = "<group>"; };
+		50E48A36992ACE693069DCAE /* Pods-INSTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INSTA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-INSTA/Pods-INSTA.debug.xcconfig"; sourceTree = "<group>"; };
 		B4C7ECB1207154BE00BAE260 /* INSTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INSTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C7ECB4207154BE00BAE260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4C7ECB9207154BE00BAE260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -26,6 +32,8 @@
 		B4C7ECCC2071563700BAE260 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		B4C7ECCE2071565500BAE260 /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
 		B4C7ECD0207158FC00BAE260 /* RoundedProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedProfileImage.swift; sourceTree = "<group>"; };
+		B4C7ECD22071601300BAE260 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B4C7ECD4207160CD00BAE260 /* Dataservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dataservice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BBCBC95E7F808C23434916A /* Pods_INSTA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8458D0FEC882D875148B4FDA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50E48A36992ACE693069DCAE /* Pods-INSTA.debug.xcconfig */,
+				4628D20969DB37BC4F31608B /* Pods-INSTA.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B4C7ECA8207154BD00BAE260 = {
 			isa = PBXGroup;
 			children = (
 				B4C7ECB3207154BE00BAE260 /* INSTA */,
 				B4C7ECB2207154BE00BAE260 /* Products */,
+				8458D0FEC882D875148B4FDA /* Pods */,
+				BA6A2B99E49F776C150E5E92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +88,7 @@
 				B4C7ECB8207154BE00BAE260 /* Main.storyboard */,
 				B4C7ECBB207154BE00BAE260 /* Assets.xcassets */,
 				B4C7ECBD207154BE00BAE260 /* LaunchScreen.storyboard */,
+				B4C7ECD22071601300BAE260 /* GoogleService-Info.plist */,
 				B4C7ECC0207154BE00BAE260 /* Info.plist */,
 			);
 			path = INSTA;
@@ -114,8 +135,17 @@
 		B4C7ECCB207155E500BAE260 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B4C7ECD4207160CD00BAE260 /* Dataservice.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		BA6A2B99E49F776C150E5E92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20C6EE347E2F90B15ACFC6EA /* Pods_INSTA.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B4C7ECC3207154BE00BAE260 /* Build configuration list for PBXNativeTarget "INSTA" */;
 			buildPhases = (
+				2F0B38CE8AFBCD39CDFAE7ED /* [CP] Check Pods Manifest.lock */,
 				B4C7ECAD207154BE00BAE260 /* Sources */,
 				B4C7ECAE207154BE00BAE260 /* Frameworks */,
 				B4C7ECAF207154BE00BAE260 /* Resources */,
+				5FFBA7D010C8A6CBB86B367B /* [CP] Embed Pods Frameworks */,
+				7A5E0CEF6BF8301CBA6EE861 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,12 +211,73 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4C7ECBF207154BE00BAE260 /* LaunchScreen.storyboard in Resources */,
+				B4C7ECD32071601400BAE260 /* GoogleService-Info.plist in Resources */,
 				B4C7ECBC207154BE00BAE260 /* Assets.xcassets in Resources */,
 				B4C7ECBA207154BE00BAE260 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F0B38CE8AFBCD39CDFAE7ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-INSTA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FFBA7D010C8A6CBB86B367B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-INSTA/Pods-INSTA-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-INSTA/Pods-INSTA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A5E0CEF6BF8301CBA6EE861 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-INSTA/Pods-INSTA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B4C7ECAD207154BE00BAE260 /* Sources */ = {
@@ -193,6 +287,7 @@
 				B4C7ECCD2071563700BAE260 /* SignUpVC.swift in Sources */,
 				B4C7ECD1207158FC00BAE260 /* RoundedProfileImage.swift in Sources */,
 				B4C7ECCF2071565500BAE260 /* homeVC.swift in Sources */,
+				B4C7ECD5207160CD00BAE260 /* Dataservice.swift in Sources */,
 				B4C7ECB5207154BE00BAE260 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +423,7 @@
 		};
 		B4C7ECC4207154BE00BAE260 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50E48A36992ACE693069DCAE /* Pods-INSTA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -343,6 +439,7 @@
 		};
 		B4C7ECC5207154BE00BAE260 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4628D20969DB37BC4F31608B /* Pods-INSTA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

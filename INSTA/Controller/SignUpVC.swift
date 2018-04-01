@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpVC: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 //Outlets
     @IBOutlet weak var profileImage: RoundedProfileImage!
-//Variables
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passWordField: UITextField!
+    
+    //Variables
     var selectedImage: UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +30,34 @@ class SignUpVC: UIViewController , UIImagePickerControllerDelegate, UINavigation
     }
     
 //Actions
+    
+    @IBAction func donePressed(_ sender: Any) {
+        guard let username = usernameField.text, usernameField.text != "" else {return}
+        guard let email = emailField.text, emailField.text != "" else {return}
+        guard let password = passWordField.text, passWordField.text != "" else {return}
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            if error != nil {
+                guard let errorMessage = AuthErrorCode(rawValue: error!._code) else {return}
+                switch errorMessage {
+                case .emailAlreadyInUse:
+                    print("Email in use")
+                case .weakPassword:
+                    print("password Weak")
+                default:
+                    print("someting went wrong")
+                }
+            }else {
+                dataService.instance.registerUsertoFB(uid: (Auth.auth().currentUser?.uid)!, username: username, email: email, profile: self.selectedImage!, completed: { (success) in
+                    if success {
+                        
+                    }
+                })
+            }
+        }
+        
+    }
+    
     func addTaptoProfileImage() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(profileImageTapped(_:)))
         self.profileImage.addGestureRecognizer(tap)
