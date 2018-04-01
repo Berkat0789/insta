@@ -30,6 +30,10 @@ class SignUpVC: UIViewController , UIImagePickerControllerDelegate, UINavigation
     }
     
 //Actions
+    @IBAction func loginherepressed(_ sender: Any) {
+        guard let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC else {return}
+        present(loginVC, animated: true, completion: nil)
+    }
     
     @IBAction func donePressed(_ sender: Any) {
         guard let username = usernameField.text, usernameField.text != "" else {return}
@@ -50,7 +54,8 @@ class SignUpVC: UIViewController , UIImagePickerControllerDelegate, UINavigation
             }else {
                 dataService.instance.registerUsertoFB(uid: (Auth.auth().currentUser?.uid)!, username: username, email: email, profile: self.selectedImage!, completed: { (success) in
                     if success {
-                        
+                        guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "homeVC") as? homeVC else{return}
+                        self.present(homeVC, animated: true, completion: nil)
                     }
                 })
             }

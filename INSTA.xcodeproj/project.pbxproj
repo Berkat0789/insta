@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4BBCBC95E7F808C23434916A /* Pods_INSTA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C6EE347E2F90B15ACFC6EA /* Pods_INSTA.framework */; };
+		B441BE102071858900DEA493 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441BE0F2071858900DEA493 /* LoginVC.swift */; };
 		B4C7ECB5207154BE00BAE260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C7ECB4207154BE00BAE260 /* AppDelegate.swift */; };
 		B4C7ECBA207154BE00BAE260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C7ECB8207154BE00BAE260 /* Main.storyboard */; };
 		B4C7ECBC207154BE00BAE260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C7ECBB207154BE00BAE260 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		20C6EE347E2F90B15ACFC6EA /* Pods_INSTA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INSTA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4628D20969DB37BC4F31608B /* Pods-INSTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INSTA.release.xcconfig"; path = "Pods/Target Support Files/Pods-INSTA/Pods-INSTA.release.xcconfig"; sourceTree = "<group>"; };
 		50E48A36992ACE693069DCAE /* Pods-INSTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INSTA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-INSTA/Pods-INSTA.debug.xcconfig"; sourceTree = "<group>"; };
+		B441BE0F2071858900DEA493 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B4C7ECB1207154BE00BAE260 /* INSTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INSTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C7ECB4207154BE00BAE260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4C7ECB9207154BE00BAE260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				B4C7ECCC2071563700BAE260 /* SignUpVC.swift */,
 				B4C7ECCE2071565500BAE260 /* homeVC.swift */,
+				B441BE0F2071858900DEA493 /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			files = (
 				B4C7ECCD2071563700BAE260 /* SignUpVC.swift in Sources */,
 				B4C7ECD1207158FC00BAE260 /* RoundedProfileImage.swift in Sources */,
+				B441BE102071858900DEA493 /* LoginVC.swift in Sources */,
 				B4C7ECCF2071565500BAE260 /* homeVC.swift in Sources */,
 				B4C7ECD5207160CD00BAE260 /* Dataservice.swift in Sources */,
 				B4C7ECB5207154BE00BAE260 /* AppDelegate.swift in Sources */,
