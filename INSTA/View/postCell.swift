@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 class postCell: UITableViewCell {
     
@@ -15,7 +17,7 @@ class postCell: UITableViewCell {
     
     func updateCell(post: Post) {
         self.postCaption.text = post.Caption
-        self.postImage.image =  UIImage(named: post.postImageURL)
+        self.postImage.image = UIImage(named: post.postImageURL)
     }
    
 

@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import Alamofire
+import AlamofireImage
 
 class homeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -53,7 +55,15 @@ class homeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as? postCell else {return UITableViewCell()}
         let post = allPosts[indexPath.row]
-        cell.updateCell(post: post)
+        cell.postCaption.text = post.Caption
+        Alamofire.request(post.postImageURL).responseImage { (response) in
+            print(response)
+            guard let image = response.result.value else {return}
+            DispatchQueue.main.async {
+                cell.postImage.image = image
+            }
+        }
+        
         return cell
     }
     
