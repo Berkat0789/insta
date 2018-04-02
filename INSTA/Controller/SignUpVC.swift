@@ -54,8 +54,8 @@ class SignUpVC: UIViewController , UIImagePickerControllerDelegate, UINavigation
             }else {
                 dataService.instance.registerUsertoFB(uid: (Auth.auth().currentUser?.uid)!, username: username, email: email, profile: self.selectedImage!, completed: { (success) in
                     if success {
-                        guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "homeVC") as? homeVC else{return}
-                        self.present(homeVC, animated: true, completion: nil)
+                        let tabVC = self.storyboard?.instantiateViewController(withIdentifier: "TabControllerVC")
+                        self.present(tabVC!, animated: true, completion: nil)
                     }
                 })
             }

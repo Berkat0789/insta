@@ -18,6 +18,12 @@ class LoginVC: UIViewController {
         
 
     }
+//Actions
+    @IBAction func signUpPressed(_ sender: Any) {
+        guard let signupVC = storyboard?.instantiateViewController(withIdentifier: "SignUpVC") as? SignUpVC else {return}
+        present(signupVC, animated: true, completion: nil)
+    }
+    
 
     @IBAction func loginPressed(_ sender: Any) {
         guard let email = emailField.text, emailField.text != "" else {return}
@@ -27,15 +33,15 @@ class LoginVC: UIViewController {
                 guard let errorMessage = AuthErrorCode(rawValue: error!._code) else {return}
                 switch errorMessage {
                 case .invalidEmail:
-                    print("INvalid Email")
+                    print("Invalid Email")
                 case .wrongPassword:
                     print("Wrong Password")
                 default:
                     print("Wrong login credentials")
                 }
             }else {
-                guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "homeVC") as? homeVC else{return}
-                self.present(homeVC, animated: true, completion: nil)
+                let tabVC = self.storyboard?.instantiateViewController(withIdentifier: "TabControllerVC")
+                self.present(tabVC!, animated: true, completion: nil)
                 
             }
         }
