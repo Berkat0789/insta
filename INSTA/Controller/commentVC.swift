@@ -12,6 +12,7 @@ import Firebase
 class commentVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var commentField: UITextField!
+    @IBOutlet weak var bottomViewHeight: NSLayoutConstraint!
     
 ////--Vars and arrays
     var Post: Post!
@@ -22,6 +23,10 @@ class commentVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardwillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardwillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
         dataService.instance.getIDFor(post: Post) { (returnedID) in
             self.postID = returnedID
             dataService.instance.firebaseREF_Comment.observe(DataEventType.value, with: { (commentSnap) in
@@ -59,7 +64,21 @@ class commentVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         view.endEditing(true)
     }
-//--View fiunctions
+//--Selectors
+    @objc func keyboardwillShow(_ notification: NSNotification) {
+        let keyboardFrame = (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
+        UIView.animate(withDuration: 0.3) {
+            self.bottomViewHeight.constant = keyboardFrame!.height
+            self.view.layoutIfNeeded()
+        }
+    }
+   @objc func keyboardwillHide(_ notification: NSNotification) {
+    UIView.animate(withDuration: 0.3) {
+        self.bottomViewHeight.constant = 0
+        self.view.layoutIfNeeded()
+    }
+    }
+//--View functions
     func initPostData(post: Post) {
         self.Post = post
     }

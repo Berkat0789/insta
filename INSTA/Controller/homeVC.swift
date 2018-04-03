@@ -57,7 +57,6 @@ class homeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let post = allPosts[indexPath.row]
         cell.postCaption.text = post.Caption
         Alamofire.request(post.postImageURL).responseImage { (response) in
-            print(response)
             guard let image = response.result.value else {return}
             DispatchQueue.main.async {
                 cell.postImage.image = image

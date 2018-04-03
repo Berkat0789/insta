@@ -592,17 +592,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="c3X-Gf-Wt0" firstAttribute="top" secondItem="nbj-7D-9Jz" secondAttribute="top" id="3Ol-09-9y7"/>
+                            <constraint firstItem="NCG-Vh-QDy" firstAttribute="top" secondItem="c3X-Gf-Wt0" secondAttribute="bottom" id="1eX-fz-UdK"/>
+                            <constraint firstItem="NCG-Vh-QDy" firstAttribute="top" secondItem="c3X-Gf-Wt0" secondAttribute="bottom" id="1zm-pL-qAu"/>
                             <constraint firstItem="NCG-Vh-QDy" firstAttribute="trailing" secondItem="6HE-vr-RL7" secondAttribute="trailing" id="Nzh-ok-bit"/>
                             <constraint firstItem="NCG-Vh-QDy" firstAttribute="leading" secondItem="6HE-vr-RL7" secondAttribute="leading" id="O3k-Ot-BI9"/>
-                            <constraint firstItem="NCG-Vh-QDy" firstAttribute="top" secondItem="c3X-Gf-Wt0" secondAttribute="bottom" id="Qpt-QL-1DC"/>
+                            <constraint firstItem="c3X-Gf-Wt0" firstAttribute="trailing" secondItem="6HE-vr-RL7" secondAttribute="trailing" id="Pnf-hX-U9N"/>
                             <constraint firstItem="NCG-Vh-QDy" firstAttribute="bottom" secondItem="6HE-vr-RL7" secondAttribute="bottom" id="VLl-U4-l4r"/>
-                            <constraint firstItem="c3X-Gf-Wt0" firstAttribute="leading" secondItem="6HE-vr-RL7" secondAttribute="leading" id="ixA-cE-N9D"/>
-                            <constraint firstItem="c3X-Gf-Wt0" firstAttribute="trailing" secondItem="6HE-vr-RL7" secondAttribute="trailing" id="mxu-ES-DPa"/>
+                            <constraint firstItem="c3X-Gf-Wt0" firstAttribute="top" secondItem="nbj-7D-9Jz" secondAttribute="top" id="eYI-gV-ldD"/>
+                            <constraint firstItem="c3X-Gf-Wt0" firstAttribute="leading" secondItem="6HE-vr-RL7" secondAttribute="leading" id="twU-PQ-Nd7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6HE-vr-RL7"/>
                     </view>
                     <connections>
+                        <outlet property="bottomViewHeight" destination="VLl-U4-l4r" id="JQX-q4-VJf"/>
                         <outlet property="commentField" destination="Gwa-Tf-bZh" id="No3-o8-vjV"/>
                         <outlet property="tableView" destination="c3X-Gf-Wt0" id="YDh-hy-nT2"/>
                     </connections>

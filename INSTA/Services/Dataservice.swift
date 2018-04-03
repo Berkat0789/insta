@@ -96,15 +96,13 @@ class dataService {
     
     func getComments(forPostwith ID: String, completed: @escaping (_ comments: [Comment]) -> ()) {
         var postComments = [Comment]()
-        firebaseREF_Comment.observeSingleEvent(of: DataEventType.value) { (commentSnap) in
+        firebaseREF_Comment.child(ID).observeSingleEvent(of: DataEventType.value) { (commentSnap) in
             guard let commentSnap = commentSnap.children.allObjects as? [DataSnapshot] else {return}
             for comments in commentSnap {
-                if comments.key.contains(ID) {
                     let commentText = comments.childSnapshot(forPath: "commentMessage").value as! String
                     let userID = comments.childSnapshot(forPath: "userID").value as! String
                     let commentList = Comment(userID: userID, commentText: commentText)
                     postComments.append(commentList)
-                }
             }
             completed(postComments)
         }
