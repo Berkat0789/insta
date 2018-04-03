@@ -35,7 +35,6 @@ class postVc: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         guard let caption = captionfield.text, captionfield.text != "" else {return}
         dataService.instance.addPosttoDB(senderID: userID, postImage: PostImage, postCaption: caption) { (success) in
             if success {
-                self.dismiss(animated: true, completion: nil)
                 self.tabBarController?.selectedIndex = 0
             }
         }

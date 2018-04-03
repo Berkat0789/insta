@@ -66,5 +66,11 @@ class homeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let commentVC = storyboard?.instantiateViewController(withIdentifier: "commentVC") as? commentVC else {return}
+        let post = allPosts[indexPath.row]
+        commentVC.initPostData(post: post)
+        present(commentVC, animated: true, completion: nil)
+    }
     
 }

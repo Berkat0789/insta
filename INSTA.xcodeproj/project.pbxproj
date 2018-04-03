@@ -11,6 +11,9 @@
 		B441BE102071858900DEA493 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B441BE0F2071858900DEA493 /* LoginVC.swift */; };
 		B473943820724DEB004A9B20 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473943720724DEB004A9B20 /* Constants.swift */; };
 		B473943A20725286004A9B20 /* postVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = B473943920725286004A9B20 /* postVc.swift */; };
+		B4A1D5E22072DE2200EB22C6 /* commentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A1D5E12072DE2200EB22C6 /* commentVC.swift */; };
+		B4A1D5E42072DE6600EB22C6 /* commentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A1D5E32072DE6600EB22C6 /* commentCell.swift */; };
+		B4A1D5E62072DF7800EB22C6 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A1D5E52072DF7800EB22C6 /* Comment.swift */; };
 		B4C7ECB5207154BE00BAE260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C7ECB4207154BE00BAE260 /* AppDelegate.swift */; };
 		B4C7ECBA207154BE00BAE260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4C7ECB8207154BE00BAE260 /* Main.storyboard */; };
 		B4C7ECBC207154BE00BAE260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4C7ECBB207154BE00BAE260 /* Assets.xcassets */; };
@@ -31,6 +34,9 @@
 		B441BE0F2071858900DEA493 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		B473943720724DEB004A9B20 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B473943920725286004A9B20 /* postVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postVc.swift; sourceTree = "<group>"; };
+		B4A1D5E12072DE2200EB22C6 /* commentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commentVC.swift; sourceTree = "<group>"; };
+		B4A1D5E32072DE6600EB22C6 /* commentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commentCell.swift; sourceTree = "<group>"; };
+		B4A1D5E52072DF7800EB22C6 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		B4C7ECB1207154BE00BAE260 /* INSTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INSTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4C7ECB4207154BE00BAE260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4C7ECB9207154BE00BAE260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 				B4C7ECCE2071565500BAE260 /* homeVC.swift */,
 				B441BE0F2071858900DEA493 /* LoginVC.swift */,
 				B473943920725286004A9B20 /* postVc.swift */,
+				B4A1D5E12072DE2200EB22C6 /* commentVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -120,6 +127,7 @@
 			children = (
 				B4C7ECD0207158FC00BAE260 /* RoundedProfileImage.swift */,
 				B4CA0F3F2071D826005E12B8 /* postCell.swift */,
+				B4A1D5E32072DE6600EB22C6 /* commentCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				B4CA0F412071D88B005E12B8 /* Post.swift */,
+				B4A1D5E52072DF7800EB22C6 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,9 +315,12 @@
 				B473943A20725286004A9B20 /* postVc.swift in Sources */,
 				B4C7ECCD2071563700BAE260 /* SignUpVC.swift in Sources */,
 				B4CA0F402071D826005E12B8 /* postCell.swift in Sources */,
+				B4A1D5E42072DE6600EB22C6 /* commentCell.swift in Sources */,
 				B4C7ECD1207158FC00BAE260 /* RoundedProfileImage.swift in Sources */,
 				B4CA0F422071D88B005E12B8 /* Post.swift in Sources */,
+				B4A1D5E22072DE2200EB22C6 /* commentVC.swift in Sources */,
 				B441BE102071858900DEA493 /* LoginVC.swift in Sources */,
+				B4A1D5E62072DF7800EB22C6 /* Comment.swift in Sources */,
 				B4C7ECCF2071565500BAE260 /* homeVC.swift in Sources */,
 				B4C7ECD5207160CD00BAE260 /* Dataservice.swift in Sources */,
 				B4C7ECB5207154BE00BAE260 /* AppDelegate.swift in Sources */,
